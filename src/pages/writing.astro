@@ -1,0 +1,112 @@
+---
+import { getCollection } from "astro:content";
+import BaseLayout from "../layouts/BaseLayout.astro";
+const posts = await getCollection("writing");
+const sortedPosts = posts.sort(
+  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
+);
+---
+
+<BaseLayout title="Matt McDaniel">
+  <div class="container">
+    <nav class="breadcrumb">
+      <ol>
+        <li><a href="/">mattmcdaniel.dev</a></li>
+        <li><span aria-current="page">Writing</span></li>
+      </ol>
+    </nav>
+    <h1>Writing</h1>
+    {
+      sortedPosts.slice(0, 5).map((post) => (
+        <article>
+          <h2>
+            <a href={`/writing/${post.id}`}>{post.data.title}</a>
+          </h2>
+          <time datetime={post.data.pubDate.toISOString()}>
+            {post.data.pubDate.toLocaleDateString("en-US", {
+              year: "numeric",
+              month: "long",
+              day: "numeric",
+            })}
+          </time>
+        </article>
+      ))
+    }
+    <footer class="site-footer">
+      <p>&copy; 2025 Matt McDaniel</p>
+    </footer>
+  </div>
+  <style>
+    html,
+    body {
+      height: 100%;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      padding: 2em 1em;
+      min-height: calc(100% - 4em);
+    }
+
+    .site-footer {
+      margin-top: auto;
+      padding-top: 2em;
+    }
+
+    .breadcrumb {
+      line-height: 1.5;
+    }
+
+    .breadcrumb ol {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .breadcrumb li:not(:last-child)::after {
+      display: inline;
+      content: "/";
+      margin-left: 0.5em;
+      margin-right: 0.25em;
+    }
+
+    h1 {
+      font-family: "YoungSerifVF", serif;
+      font-size: 4rem;
+      font-weight: 100;
+      letter-spacing: -0.0125em;
+      line-height: 1;
+      margin: 1em 0 0;
+    }
+
+    h2 {
+      margin-top: 1.5em;
+      margin-bottom: 0.5em;
+    }
+
+    hr {
+      border: 0;
+      color: #fff;
+      margin: 1em 0;
+    }
+
+    hr::after {
+      content: "###";
+      font-family: monospace;
+    }
+
+    @media screen and (min-width: 30em) {
+      .breadcrumb li {
+        display: inline;
+      }
+    }
+
+    @media screen and (min-width: 60em) {
+      .container {
+        padding-left: 2em;
+        padding-right: 2em;
+      }
+    }
+  </style>
+</BaseLayout>

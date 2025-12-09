@@ -1,0 +1,33 @@
+<style is:global>
+@font-face {
+  font-family: InterVariable;
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url("/fonts/Inter/InterVariable.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: InterVariable;
+  font-style: italic;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url("/fonts/Inter/InterVariable-Italic.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: YoungSerifVF;
+  font-display: swap;
+  src: url("/fonts/YoungSerif/YoungSerifVF.woff2") format("woff2-variations"),
+    url("/fonts/YoungSerif/YoungSerifVF.woff") format("woff-variations");
+}
+
+:root {
+  font-family: "InterVariable", sans-serif;
+  font-feature-settings: 'liga' 1, 'calt' 1; /* fix for Chrome */
+}
+
+body {
+  margin: 0;
+}
+</style>
