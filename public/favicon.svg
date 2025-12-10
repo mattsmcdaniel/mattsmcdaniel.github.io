@@ -1,10 +1,12 @@
-<svg viewbox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-  <style>
-    @media (prefers-color-scheme: dark) {
-      :root {
-        filter: brightness(2);
-      }
-    }
-  </style>
-  <circle cx="50" cy="50" r="50" fill="#cfed5e" />
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="180" height="180"><svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 180" width="180" height="180">
+	<style>
+		.s0 { fill: #ffffff } 
+		.s1 { fill: #000000 } 
+	</style>
+	<g id="SvgjsG1005">
+		<path id="SvgjsPath1004" fill-rule="evenodd" class="s0" d="m180 0v180h-180v-180z"></path>
+		<path id="SvgjsPath1003" class="s1" aria-label="M" d="m129.7 58.5v52q0 4 1.8 6.8 1.9 2.7 5.6 2.7 1.5 0 1.5 1.5v3q0 1.5-1.5 1.5h-24.7q-1.5 0-1.5-1.5v-3q0-1.5 1.5-1.5 3.7 0 5.5-2.7 1.8-2.8 1.8-6.8v-37.9l-23.6 47.8q-0.5 1.1-1.7 1.1h-9.2q-1.2 0-1.8-1.1l-23.5-47.8v37.9q0 4 1.8 6.8 1.8 2.7 5.5 2.7 1.5 0 1.5 1.5v3q0 1.5-1.5 1.5h-24.7q-1.5 0-1.5-1.5v-3q0-1.5 1.5-1.5 3.7 0 5.5-2.7 1.9-2.8 1.9-6.8v-52q-1.4-0.8-3-1.1-1.5-0.4-3.2-0.4-1.5 0-1.5-1.5v-3q0-1.5 1.5-1.5h18.8q1.4 0 1.8 0.9l25.5 51.6 25.5-51.6q0.4-0.9 1.8-0.9h18.8q1.5 0 1.5 1.5v3q0 1.5-1.5 1.5-1.6 0-3.2 0.4-1.6 0.3-3 1.1z"></path>
+	</g>
+</svg><style>@media (prefers-color-scheme: light) { :root { filter: none; } }
+@media (prefers-color-scheme: dark) { :root { filter: none; } }
+</style></svg>
